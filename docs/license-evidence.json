@@ -1,0 +1,62 @@
+[
+  {
+    "repository": "motif-Labs/motif",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    },
+    "sha": "d7a4518ee12806423edb6420d5bb38356f2b2661",
+    "url": "https://github.com/motif-Labs/motif/blob/main/LICENSE"
+  },
+  {
+    "repository": "AVIDS2/memorix",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    },
+    "sha": "272c1c517e72f8f09765a4772deb94eb671f9789",
+    "url": "https://github.com/AVIDS2/memorix/blob/main/LICENSE"
+  },
+  {
+    "repository": "agentscope-ai/ReMe",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    },
+    "sha": "65c2c5cf06d722c79d8105cfce97016491a7a7f4",
+    "url": "https://github.com/agentscope-ai/ReMe/blob/main/LICENSE"
+  },
+  {
+    "repository": "getzep/graphiti",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    },
+    "sha": "5feb0d9d299a1107adfa8331306b13cc0eff2d78",
+    "url": "https://github.com/getzep/graphiti/blob/main/LICENSE"
+  },
+  {
+    "repository": "langchain-ai/langmem",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "sha": "c38f6f284dc464af69e9f618bc0304d299d0bdf0",
+    "url": "https://github.com/langchain-ai/langmem/blob/main/LICENSE"
+  }
+]

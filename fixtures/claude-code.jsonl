@@ -1,0 +1,2 @@
+{"type":"user","timestamp":"2026-10-30T01:00:00Z","message":{"role":"user","content":"为 Atlas 的通知服务约定重试策略。此文件为脱敏模拟。"}}
+{"type":"assistant","timestamp":"2026-10-30T01:01:00Z","message":{"role":"assistant","content":[{"type":"text","text":"[决策:notifications.retry] 通知投递最多重试 5 次，超过次数进入死信队列。"}]}}

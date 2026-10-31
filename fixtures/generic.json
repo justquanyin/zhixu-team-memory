@@ -1,0 +1,1 @@
+{"messages":[{"role":"user","content":"以下为脱敏演示会话，请审核结论。"},{"role":"assistant","content":"[决策:api.pagination] 列表接口采用游标分页，单页最多 100 条。\n[经验:api.errors] 接口错误必须返回稳定错误码，禁止向调用方暴露内部凭据。"}]}

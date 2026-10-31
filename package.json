@@ -1,0 +1,59 @@
+{
+  "name": "zhixu-team-memory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server/index.ts",
+    "start": "NODE_ENV=production tsx src/server/index.ts",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "test:postgres": "tsx scripts/test-postgres.ts",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "mcp": "tsx src/server/mcp.ts",
+    "format": "prettier --write src tests scripts vite.config.ts",
+    "import:codex": "tsx scripts/import-codex.ts"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.13",
+    "@electric-sql/pglite-pgvector": "^0.0.14",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.3.0",
+    "lucide-react": "^1.65.0",
+    "pg": "^8.23.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/supertest": "^7.2.1",
+    "@vitejs/plugin-react": "^4.7.0",
+    "prettier": "^3.9.10",
+    "supertest": "^7.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^6.4.5",
+    "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "description": "中文团队 AI Session 记忆工作台：证据归档、候选审核、版本治理与权限隔离的 MCP 召回。",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justquanyin/zhixu-team-memory.git"
+  },
+  "homepage": "https://github.com/justquanyin/zhixu-team-memory#readme",
+  "bugs": {
+    "url": "https://github.com/justquanyin/zhixu-team-memory/issues"
+  }
+}
