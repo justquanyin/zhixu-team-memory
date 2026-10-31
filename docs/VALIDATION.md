@@ -10,6 +10,7 @@
 | `npm test` | **4 个文件、36 项测试全部通过** |
 | `npm audit --registry=https://registry.npmjs.org` | 当次检查 0 项漏洞（包含开发依赖） |
 | `npm ci --registry=https://registry.npmjs.org` | 在独立空目录与全新缓存中真实安装成功；锁文件全部使用公共 npm 源 |
+| GitHub Actions（Ubuntu / Node 22） | PGlite 测试与构建通过；独立 PostgreSQL 17 + pgvector 服务测试通过，见 [运行记录](https://github.com/justquanyin/zhixu-team-memory/actions/runs/41182083366) |
 | 本地持久化重启 | 开发进程停止后启动生产进程，Session、知识、登录 token 与日志仍可读取 |
 | 生产 HTTP 冒烟 | health / login / dashboard 可用；运行时密码文件未通过静态服务暴露 |
 | 开发静态文件保护 | 对 `.runtime/admin-password.txt` 的 HTTP 请求返回 403 |
@@ -52,7 +53,7 @@
 
 ## 未验证与限制
 
-- Docker daemon 不可用：未启动外部 PostgreSQL + pgvector 容器；不把 PGlite 测试宣称为原生 PostgreSQL 部署测试。
+- PostgreSQL 17 + pgvector 已通过 GitHub Actions 容器测试；尚未验证托管云数据库、多实例部署或跨版本迁移。
 - 未提供外部模型密钥：模型适配器只有模拟协议/失败恢复测试，没有真实 provider 质量或可用性验收。
 - MCP 协议与传输已实测；未在用户实际 Claude Code/Codex/Cursor 配置中安装或读取个人会话历史。
 - 只有明确支持格式的模拟文件适配测试，没有覆盖所有客户端版本与 Cursor 私有数据库。

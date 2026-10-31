@@ -1,5 +1,7 @@
 # 知序 · Team Memory MVP
 
+[![CI](https://github.com/justquanyin/zhixu-team-memory/actions/workflows/ci.yml/badge.svg)](https://github.com/justquanyin/zhixu-team-memory/actions/workflows/ci.yml)
+
 一个可本地运行的中文团队 Coding Agent Session 记忆工作台。TypeScript + React + Express + PostgreSQL / PGlite + pgvector + FTS + MCP。
 
 **已实现真实持久化和端到端操作**：原始 Session → 自动提取候选 → 人工审核 → 版本化团队知识 → 冲突/过期治理 → 权限过滤的混合召回 → 日志/反馈。无需 API 密钥即可演示。默认是离线规则提取与词法向量；不是已接入大模型的语义记忆服务。
@@ -89,7 +91,7 @@ npm start
 npm run test:postgres
 ```
 
-该测试使用 `TEST_DATABASE_URL` 或 `DATABASE_URL`，在唯一临时 schema 中运行并清理该 schema；没有地址会报错，不会静默降级。建议指向独立测试数据库。当前交付在 PGlite PostgreSQL 引擎验证通过；本机 Docker daemon 未运行，**外部 PostgreSQL 容器路径未实际执行验证**。
+该测试使用 `TEST_DATABASE_URL` 或 `DATABASE_URL`，在唯一临时 schema 中运行并清理该 schema；没有地址会报错，不会静默降级。建议指向独立测试数据库。PGlite 与 **PostgreSQL 17 + pgvector 容器**均已在 GitHub Actions 验证通过；详见 [验证记录](docs/VALIDATION.md)。
 
 两个后端使用同一迁移、参数化 SQL 和服务层。已有 PGlite 数据不会自动搬到外部 PostgreSQL，切换地址得到的是独立数据集。迁移由 `schema_migrations` 记录；启动单实例执行迁移，多实例部署应先独立执行迁移。
 
